@@ -19,7 +19,7 @@ class ApprovalsView(viewsets.ModelViewSet):
     queryset = Approvals.objects.all()
     serializer_class = ApprovalsSerializers
 
-@api_view
+@api_view(["POST"])
 def approvereject(request):
     try:
         mdl = joblib.load("C:/Users/ojare/AIML/Bank-Loan-Authentication/loan_model.pkl")
